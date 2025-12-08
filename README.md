@@ -44,20 +44,27 @@ It uses Convex as the backend, which is a real-time database that allows for ins
 
 ## Installation
 
-### 1. Clone the repository
+### 1. Fork the repository
+
+1. Click the "Fork" button at the top right of this repository on GitHub
+2. This creates your own copy of the repository that you can work on
+
+### 2. Clone your fork
 
 ```bash
-git clone <repository-url>
-cd noted-main
+git clone https://github.com/YOUR-USERNAME/noted-starter.git
+cd noted-starter
 ```
 
-### 2. Install dependencies
+Replace `YOUR-USERNAME` with your GitHub username.
+
+### 3. Install dependencies
 
 ```bash
 npm install
 ```
 
-### 3. Set up environment variables
+### 4. Set up environment variables
 
 Create a `.env.local` file in the root directory with the following variables:
 
@@ -122,7 +129,7 @@ If you don't want to install dotenv-cli, you can temporarily:
 3. Run `npm run dev`
 4. When done, restore `.env.local` from backup
 
-### 4. Get API keys
+### 5. Get API keys
 
 #### Convex (Backend Database)
 
@@ -163,7 +170,7 @@ If you don't want to install dotenv-cli, you can temporarily:
    - `EDGE_STORE_ACCESS_KEY`
    - `EDGE_STORE_SECRET_KEY`
 
-### 5. Configure Convex Authentication
+### 6. Configure Convex Authentication
 
 The `convex/auth.config.js` file should already be configured with your Clerk domain. Verify it matches your Clerk Frontend API URL:
 
@@ -180,7 +187,7 @@ export default {
 
 Replace `your-clerk-domain` with your actual Clerk domain (found in your Clerk Dashboard → API Keys → Frontend API URL).
 
-### 6. Run the application
+### 7. Run the application
 
 **Terminal 1 - Start Convex:**
 ```bash
